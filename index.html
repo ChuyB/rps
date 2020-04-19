@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>PPT</title>
+    <script src="./script.js"></script>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+    <main id="main" class="main">
+        
+        <!-- ------------------- CONTADOR ------------------- -->
+
+        <div class="contador" id="contenedor">
+            <p id="nrContador">3</p>
+        </div>
+
+        <!-- ------------------- RESULTADO ------------------- -->
+
+        <div id="resultado" class="resultado">
+            <h2 id="textoResultado">Piedra, Papel o Tijera</h2>
+        </div>
+
+        <!-- ------------------- BOTONES DE ACCIÓN ------------------- -->
+
+        <div class="botones" id="botones">
+
+            <button onclick="piedra()" class="boton_1">Piedra</button>
+            <button onclick="papel()" class="boton_2">Papel</button>
+            <button onclick="tijera()" class="boton_3">Tijera</button>
+
+        </div>
+
+        <!-- ------------------- VENTANAS MODALES ------------------- -->
+
+        <div class="firstModalWindow" id="overlay_1">
+            <div class="modalWindowWin" id="popup_1">
+                <h3>Haz Ganado</h3>
+                <button class="boton_modal" id="botonCerrar" onclick="cerrarModal(modalWinBack, modalWin)">Reiniciar</button>
+            </div>
+        </div>
+
+        <div class="secondModalWindow" id="overlay_2">
+            <div class="modalWindowLose" id="popup_2">
+                <h3>Haz Perdido</h3>
+                <button class="boton_modal" id="botonCerrar" onclick="cerrarModal(modalLoseBack, modalLose)">Reiniciar</button>
+            </div>
+        </div>
+
+        <div class="thirdModalWindow" id="overlay_3">
+            <div class="modalWindowTie" id="popup_3">
+                <h3>Haz Empatado</h3>
+                <button class="boton_modal" id="botonCerrar" onclick="cerrarModal(modalTieBack, modalTie)">Reiniciar</button>
+            </div>
+        </div>
+
+        <!-- -------------------- MARCADOR ------------------- -->
+        
+        
+        <div class="contMarcador">
+            <button id="reinicarMarcador" onclick="reestablecer()">Reiniciar</button>
+            <p id="marcador">0 - 0</p>
+        </div>
+
+    </main>
+</body>
+
+</html>
